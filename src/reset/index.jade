@@ -1,0 +1,14 @@
+extends ../_partials/_layout.jade
+
+block title
+  title Reset Password
+
+block content
+  .onTempPassword
+    form
+      h1 Change Password
+        .form-group
+          input(type="password" placeholder="Current Password" class="form-control input-lg")
+        .form-group
+          input(type="password" placeholder="New Password" class="form-control input-lg")
+        input(type="submit" value="Change Password" class="btn btn-danger btn-lg")

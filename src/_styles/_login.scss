@@ -1,0 +1,23 @@
+.login, .onTempPassword {
+  background-color:rgba(72,72,72,0.2);
+  padding: 3%;
+  border-radius: 8px;
+  width: 350px;
+  margin: 7% auto;
+  text-align: center;
+}
+
+.form-group {
+  padding: 2%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.doLogout {
+  border-radius: 5px;
+  line-height: .75;
+  float: right;
+}

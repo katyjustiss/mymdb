@@ -1,0 +1,34 @@
+extends ./_partials/_layout.jade
+
+block title
+  title My Movie Database
+
+block content
+  .container-fluid
+    .row
+      .onLoggedIn
+        button.doLogout.btn-info Logout
+      .col-md-4
+        h1 Lookup Movies here!
+
+    .row
+      .col-md-4
+        .search-form
+          form.submit-form
+            input(placeholder='Enter a movie name', name='movie' required)
+            input(type='submit', class='movie_button', value='Search')
+
+      .col-md-6.movie_result
+        .movie-container.col-md-8
+        .col-md-1
+          input(type='button', value='Watch', class='add')
+
+    .info-container.table-responsive
+      table.movie-list.table.table-striped.col-md-11
+        tr
+          th.col-md-1 Poster
+          th.col-md-1 Title
+          th.col-md-1 Year
+          th.col-md-1 Genre
+          th.col-md-1 Rating
+          th.col-md-1 Delete
