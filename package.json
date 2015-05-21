@@ -1,0 +1,31 @@
+{
+  "name": "mymdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "./node_modules/.bin/hs -a localhost -p $((RANDOM + 10000)) -o",
+    "build": "./build.sh",
+    "start": "npm run build; npm run server",
+    "deploy": "npm run build; ./deploy.sh",
+    "watch": "./watch.sh; npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katyjustiss/mymdb.git"
+  },
+  "author": "Katy Justiss <katy.justiss@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katyjustiss/mymdb/issues"
+  },
+  "homepage": "https://github.com/katyjustiss/mymdb#readme",
+  "devDependencies": {
+    "bowcat": "0.0.4",
+    "http-server": "^0.8.0",
+    "jade": "jadejs/jade",
+    "node-sass": "^3.1.1",
+    "nodemon": "^1.3.7"
+  }
+}
