@@ -223,7 +223,7 @@ var $rows = $('.movie-list');
 $rows.on('click', '.btn', function() {
   var $movie_row = $(this).closest('.movie_row');
   var id = $movie_row.attr('data-id');
-  var deleteUrl = FIREBASE_AUTH + '/users/' + fb.getAuth().uid + '/movies.json?auth=' + fb.getAuth().token.slice(0, -5) + '/' + id + '.json';
+  var deleteUrl = FIREBASE_AUTH + '/users/' + fb.getAuth().uid + '/movies.json'.slice(0, -5) + '/' + id + '.json?auth=' + fb.getAuth().token;
   $.ajax({
     url: deleteUrl,
     type: 'DELETE',
@@ -232,7 +232,6 @@ $rows.on('click', '.btn', function() {
     }
   })
 });
-
 
 
 
