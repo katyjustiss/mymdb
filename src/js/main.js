@@ -215,8 +215,8 @@ var $rows = $('.movie-list');
 $rows.on('click', '.btn', function() {
   var $movie_row = $(this).closest('.movie_row');
   var id = $movie_row.attr('data-id');
-    favMovies.child(id).set(null);
-    $movie_row.remove();
+    favMovies.child(id).set(null);  //removing url from firebase. could also .remove() instead of set?
+    $movie_row.remove(); //removing row from table
    favMovies.on('child_removed', function() {
   })
 });
