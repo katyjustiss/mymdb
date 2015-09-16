@@ -125,8 +125,8 @@ fb.onAuth(function (authData) {
       obj[snapshot.key()] = snapshot.val(); //storing snapshot.val as property
       userMovies(obj); //passing that object to this function
     });
-  } else if (!authData && window.location.pathname !== '/login/') {
-    window.location = '/login/';
+  } else if (!authData && window.location.pathname !== '/mymdb/login/') {
+    window.location = 'mymdb/login/';
     $('.onLoggedIn').addClass('hidden');
   }
   clearLoginForm();
