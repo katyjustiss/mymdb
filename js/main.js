@@ -115,9 +115,9 @@ $('.onTempPassword form').submit(function () {
 //ONLOAD DATA WITH toggle of forms
 //if authData is true, they are logged in.
 fb.onAuth(function (authData) {
-  if (authData && authData.password.isTemporaryPassword && window.location.pathname !== '/reset/') {
-    window.location = '/reset';
-  } else if (authData && !authData.password.isTemporaryPassword && window.location.pathname === '/') {
+  if (authData && authData.password.isTemporaryPassword && window.location.pathname !== '/mymdb/reset/') {
+    window.location = 'mymdb/reset';
+  } else if (authData && !authData.password.isTemporaryPassword && window.location.pathname === '/mymdb') {
     favMovies = fb.child('users/' + fb.getAuth().uid + '/movies');
     favMovies.on('child_added', function (snapshot) {
       //when movie is added, capture data
