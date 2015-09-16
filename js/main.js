@@ -116,7 +116,7 @@ $('.onTempPassword form').submit(function () {
 //if authData is true, they are logged in.
 fb.onAuth(function (authData) {
   if (authData && authData.password.isTemporaryPassword && window.location.pathname !== '/reset/') {
-    window.location = 'reset';
+    window.location = '/reset';
   } else if (authData && !authData.password.isTemporaryPassword && window.location.pathname === '/') {
     favMovies = fb.child('users/' + fb.getAuth().uid + '/movies');
     favMovies.on('child_added', function (snapshot) {
@@ -126,7 +126,7 @@ fb.onAuth(function (authData) {
       userMovies(obj); //passing that object to this function
     });
   } else if (!authData && window.location.pathname !== '/login/') {
-    window.location = 'login/';
+    window.location = '/login/';
     $('.onLoggedIn').addClass('hidden');
   }
   clearLoginForm();
